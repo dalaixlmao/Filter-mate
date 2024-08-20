@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center">
-      <div className="absolute bottom-10 bg-red-100/10 backdrop-blur-lg px-4 py-2 border-red-500 border-2 rounded-lg flex flex-row">
+      <div className="absolute bottom-10 bg-yellow-100/10 backdrop-blur-md px-4 py-2 border-yellow-500 border-2 rounded-lg flex flex-row">
       <Alert /> Assignment in progress !</div>
       <div className="md:4/5 lg:w-3/5 bg-white/10 h-full">
         <div className="h-[10%] flex flex-col items-center">
