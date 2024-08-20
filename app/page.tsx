@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center">
-      <div className="md:w-4/5 w-full lg:w-3/5 bg-white/10 h-full">
+      <div className="md:4/5 lg:w-3/5 bg-white/10 h-full">
         <div className="h-[10%] flex flex-col items-center">
           <SearchBar />
         </div>
