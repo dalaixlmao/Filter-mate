@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./slice";
+import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction } from "@reduxjs/toolkit";
+import Planet from "@/components/Planet";
+
+
 
 export const makeStore = () => {
   return configureStore({
