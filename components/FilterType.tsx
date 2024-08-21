@@ -33,7 +33,6 @@ export default function FilterType({ name }: { name: string }) {
           dispatch(setSizes(sizes.data));
         }
       }
-      console.log("Filtertype.tsx");
     }
     f();
   },[name]);
@@ -42,7 +41,7 @@ export default function FilterType({ name }: { name: string }) {
 
     case "Color":{
         return (
-            <div className="mb-12 ml-12 md:ml-24">
+            <div className="mb-12 ml-6 md:ml-24">
             <div className="mb-2">{name}</div>
             {color.map((elem) => (
                 <FilterCheck key={elem.id} name={elem.name} id={elem.id} type={name} />
@@ -52,7 +51,7 @@ export default function FilterType({ name }: { name: string }) {
     }
     case "Shape":{
         return (
-            <div className="mb-12 ml-12 md:ml-24">
+            <div className="mb-12 ml-6 md:ml-24">
             <div className="mb-2">{name}</div>
             {shape.map((elem) => (
                 <FilterCheck key={elem.id} name={elem.name} id={elem.id} type={name} />
@@ -62,7 +61,7 @@ export default function FilterType({ name }: { name: string }) {
     }
     case "Size":{
         return (
-            <div className="mb-12 ml-12 md:ml-24">
+            <div className="mb-12 ml-6 md:ml-24">
             <div className="mb-2">{name}</div>
             {size.map((elem) => (
                 <FilterCheck key={elem.id} name={elem.name} id={elem.id} type={name} />

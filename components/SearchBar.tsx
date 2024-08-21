@@ -22,16 +22,14 @@ export default function SearchBar() {
   );
 
   return (
-    <div className="mt-8 w-full px-12 md:px-24 flex flex-row justify-center">
+    <div className="mt-8 w-full px-6 md:px-24 flex flex-row justify-center">
       <input onKeyDown={(e) => {
         if (e.key === "Enter") {
           dispatch(setPlanetText(text));
-          console.log(planetText);
         }
       }}
         onChange={(e) => {
           setText(e.target.value);
-          console.log(text);
         }}
         className="w-full bg-white/10 px-3 py-1 rounded-md focus:border-white/60 border-white/10 border"
         type={"text"}
@@ -40,7 +38,6 @@ export default function SearchBar() {
       <button
         onClick={() => {
           dispatch(setPlanetText(text));
-          console.log(planetText);
         }}
         className="bg-white text-black px-3 py-1 rounded-md ml-2 hover:bg-white/30"
       >

@@ -17,7 +17,6 @@ export default function Result() {
     async function f() {
       const planets = await axios.get("https://api-planets.vercel.app/planets");
       dispatch(setPlanets(planets.data));
-      console.log("result.tsx");
     }
     f();
   }, []);

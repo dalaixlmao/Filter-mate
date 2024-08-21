@@ -31,6 +31,5 @@ export default function filterPlanet(planetText:string, p:Planet[], colorFilter:
             });
           })
         : filter3;
-        console.log("fitlerplanet.ts");
     return filter4;
   }
