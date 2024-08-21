@@ -24,7 +24,7 @@ Follow these instructions to set up and run the project on your local machine fo
 Ensure you have the following software installed:
 
 - **Node.js** (v14 or higher)
-- **npm** (v6 or higher) or **Yarn** (v1.22 or higher)
+- **npm** (v6 or higher)
 
 ### Installation
 
@@ -77,7 +77,7 @@ Here's an overview of the project structure:
     |   ├── store.ts
     |   ├── hook.ts
     |   ├── slice.ts
-    |   ├── StoreProvider.ts
+    |   ├── StoreProvider.tsx
     ├── .eslintrc.json    
     ├── tailwind.config.js
     ├── tsconfig.json     
