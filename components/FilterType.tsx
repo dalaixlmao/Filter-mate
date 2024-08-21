@@ -18,24 +18,22 @@ export default function FilterType({ name }: { name: string }) {
           const colors = await axios.get(
             "https://api-planets.vercel.app/colors"
           );
-          console.log(colors.data);
           dispatch(setColors(colors.data));
         }
         case "Shape": {
           const shapes = await axios.get(
             "https://api-planets.vercel.app/shapes"
           );
-          console.log(shapes.data);
           dispatch(setShapes(shapes.data));
         }
         case "Size": {
           const sizes = await axios.get(
             "https://api-planets.vercel.app/sizes"
           );
-          console.log(sizes.data);
           dispatch(setSizes(sizes.data));
         }
       }
+      console.log("Filtertype.tsx");
     }
     f();
   },[name]);

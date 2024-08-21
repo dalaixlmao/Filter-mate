@@ -6,7 +6,7 @@ export default function LowerHalf() {
       <div className="flex flex-col w-2/5 items-center h-full border-r-2 border-white/10">
         <Filters />
       </div>
-      <div className="flex flex-col w-3/5 items-center h-full">
+      <div className="flex flex-col w-3/5 items-center h-full overflow-y-auto">
         <Result />
       </div>
     </div>

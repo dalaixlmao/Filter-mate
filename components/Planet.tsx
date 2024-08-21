@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { setLoader } from "@/store/slice";
+import { useDispatch } from "react-redux";
 
 export default function Planet({
   planet,
@@ -16,18 +18,18 @@ export default function Planet({
   const [col, setCol] = useState("");
   const [shape1, setShape1] = useState("");
   const [size1, setSize1] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(()=>{
     async function f(){
       const res1 = await axios.get("https://api-planets.vercel.app/colors/?id="+color);
-      console.log(res1.data[0].name);
       setCol(res1.data[0].name);
       const res2 = await axios.get("https://api-planets.vercel.app/shapes/?id="+shape);
-      console.log(res2.data[0].name);
       setShape1(res2.data[0].name);
       const res3 = await axios.get("https://api-planets.vercel.app/sizes/?id="+size);
-      console.log(res3.data[0].name);
       setSize1(res3.data[0].name);
+      console.log("planet.tsx");
+      dispatch(setLoader(false));
     }
 f();
   },[planet, shape, size, color])

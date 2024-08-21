@@ -25,12 +25,16 @@ const initialState = {
   sizeFilter: [] as Attributes[],
   shapeFilter: [] as Attributes[],
   planetsShow: [] as Planet[],
+  loader: true,
 };
 
 export const planetStates = createSlice({
   name: "shape",
   initialState,
   reducers: {
+    setLoader: (state, action: PayloadAction<boolean>) => {
+      state.loader = action.payload;
+    },
     setShapes: (state, action: PayloadAction<Attributes[]>) => {
       state.shapes = action.payload;
     },
@@ -49,44 +53,23 @@ export const planetStates = createSlice({
     setColorFilter: (state, action: PayloadAction<Attributes[]>) => {
       state.colorFilter = action.payload;
     },
+    removeColorFilter:(state, action: PayloadAction<Attributes>)=>{
+      state.colorFilter = state.colorFilter.filter((elem) => {
+        return elem.id !== action.payload.id;
+    })},
+    removeShapeFilter:(state, action: PayloadAction<Attributes>)=>{
+      state.shapeFilter = state.shapeFilter.filter((elem) => {
+        return elem.id !== action.payload.id;
+    })},
+    removeSizeFilter:(state, action: PayloadAction<Attributes>)=>{
+      state.sizeFilter = state.sizeFilter.filter((elem) => {
+        return elem.id !== action.payload.id;
+    })},
     setSizeFilter: (state, action: PayloadAction<Attributes[]>) => {
       state.sizeFilter = action.payload;
     },
     setShapeFilter: (state, action: PayloadAction<Attributes[]>) => {
       state.shapeFilter = action.payload;
-    },
-    filterPlanet: (state, action) => {
-      const filter1 =
-        state.planetText != ""
-          ? state.planets.filter((elem) => {
-              return elem.name.includes(state.planetText);
-            })
-          : state.planets;
-      const filter2 =
-        state.colors.length != 0
-          ? filter1.filter((elem) => {
-              return state.colorFilter.some((e) => {
-                return e.id === elem.color;
-              });
-            })
-          : filter1;
-      const filter3 =
-        state.shapes.length != 0
-          ? filter2.filter((elem) => {
-              return state.shapeFilter.some((e) => {
-                return e.id === elem.shape;
-              });
-            })
-          : filter2;
-      const filter4 =
-        state.sizes.length != 0
-          ? filter3.filter((elem) => {
-              return state.sizeFilter.some((e) => {
-                return e.id === elem.size;
-              });
-            })
-          : filter3;
-      state.planetsShow = filter4;
     },
   },
 });
@@ -101,7 +84,10 @@ export const {
   setColorFilter,
   setShapeFilter,
   setSizeFilter,
-  filterPlanet,
+  removeColorFilter,
+  removeShapeFilter,
+  removeSizeFilter,
+  setLoader
 } = planetStates.actions;
 
 export const getColor = (state: RootState, id: string): string | undefined => {
