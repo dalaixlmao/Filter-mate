@@ -8,26 +8,9 @@ import SearchBar from "@/components/SearchBar";
 import LowerHalf from "@/components/LowerHalf";
 import { useEffect } from "react";
 import axios from "axios";
-import { Planet } from "@/store/slice";
 
 
 export default function Home() {
-  const dispatch = useDispatch();
-  const color = useSelector((state: RootState) => state.counter.colors);
-  const shape = useSelector((state: RootState) => state.counter.shapes);
-  const size = useSelector((state: RootState) => state.counter.sizes);
-  const planet = useSelector((state: RootState) => state.counter.planets);
-
-  useEffect(() => {
-    async function f() {
-      const planets = await axios.get("https://api-planets.vercel.app/planets");
-      console.log(planets.data);
-      dispatch(setPlanets(planets.data));
-      
-    }
-    f();
-  });
-
   return (
     <div className="h-screen w-screen flex flex-col items-center">
       <div className="absolute top-10 bg-red-100/10 backdrop-blur-lg px-4 py-2 border-red-500 border-2 rounded-lg flex flex-row">

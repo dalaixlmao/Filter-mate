@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "./store";
 
 export interface Planet {
   id: string;
@@ -90,25 +91,7 @@ export const planetStates = createSlice({
   },
 });
 
-export const counterSlice = createSlice({
-  name: "counter",
-  initialState: {
-    value: 0,
-  },
-  reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
-  },
-});
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 export const {
   setShapes,
   setColors,
@@ -120,5 +103,13 @@ export const {
   setSizeFilter,
   filterPlanet,
 } = planetStates.actions;
+
+export const getColor = (state: RootState, id: string): string | undefined => {
+  const color = state.counter.colors.find((shape) => shape.id === id);
+  return color ? color.name : undefined;
+};
+
+
+
 
 export default planetStates.reducer;
