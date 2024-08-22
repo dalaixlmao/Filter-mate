@@ -1,19 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
-
-export interface Planet {
-  id: string;
-  name: string;
-  color: string;
-  size: string;
-  shape: string;
-}
-
-export interface Attributes {
-  id: string;
-  name: string;
-}
+import { Planet, Attributes } from "@/lib/types";
 
 const initialState = {
   planets: [] as Planet[],

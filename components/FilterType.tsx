@@ -15,21 +15,15 @@ export default function FilterType({ name }: { name: string }) {
     async function f() {
       switch (name) {
         case "Color": {
-          const colors = await axios.get(
-            "https://api-planets.vercel.app/colors"
-          );
+          const colors = await axios.get("https://api-planets.vercel.app/colors");
           dispatch(setColors(colors.data));
         }
         case "Shape": {
-          const shapes = await axios.get(
-            "https://api-planets.vercel.app/shapes"
-          );
+          const shapes = await axios.get("https://api-planets.vercel.app/shapes");
           dispatch(setShapes(shapes.data));
         }
         case "Size": {
-          const sizes = await axios.get(
-            "https://api-planets.vercel.app/sizes"
-          );
+          const sizes = await axios.get("https://api-planets.vercel.app/sizes");
           dispatch(setSizes(sizes.data));
         }
       }

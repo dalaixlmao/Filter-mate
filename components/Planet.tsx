@@ -33,8 +33,10 @@ export default function Planet({
 f();
   },[planet, shape, size, color])
 
+  const css = "text-"+col+"-500 text-lg font-semibold";
+
   return <div className="w-full pl-5 md:pr-24 pr-6 mb-2">
-    <div className={`text-lg font-semibold`}>{planet}</div>
+    <div className={css}>{planet}</div>
     <div className="text-white/40 text-sm mt-1 font-light border-b border-white/20 pb-3">{planet} is a {shape1} and {size1} planet with {col} color.</div>
   </div>;
 }

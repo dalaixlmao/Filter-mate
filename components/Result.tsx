@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { RootState } from "@/store/store";
 import axios from "axios";
-import { setColorFilter, setPlanets } from "@/store/slice";
-import { Planet as PlanetType } from "@/store/slice";
+import { setPlanets } from "@/store/slice";
+import { Planet as PlanetType } from "../lib/types";
 import filterPlanet from "@/lib/action/filterPlanets";
 export default function Result() {
   const dispatch = useDispatch();

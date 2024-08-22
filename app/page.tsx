@@ -18,7 +18,7 @@ export default function Home() {
   const [render, setRender] = useState(true);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center">
+    <div className="h-screen w-screen flex flex-col items-center transition-all">
       {loader?<div className="absolute h-full w-full bg-black/50 backdrop-blur-md flex flex-col justify-center items-center"><Loader/></div>:<></>}
       <div className="md:4/5 lg:w-3/5 bg-white/10 h-full">
       <div className="h-[5%]"><MoveFilter render={render} setRender={setRender}/></div>
