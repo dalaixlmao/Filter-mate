@@ -57,6 +57,7 @@ Here's an overview of the project structure:
     |   ├── page.tsx
     ├── components/         
     |   ├── Alert.tsx
+    |   ├── Cross.tsx
     |   ├── Error.tsx
     |   ├── Export.tsx
     |   ├── ExportFilter.tsx
@@ -69,9 +70,14 @@ Here's an overview of the project structure:
     |   ├── Planet.tsx
     |   ├── Result.tsx
     |   ├── SearchBar.tsx
-    ├── lib/action             
-    |       ├── downloadJSON.ts
-    |       ├── filterPlanets.ts
+    |   ├── UploadOption.tsx
+    ├── lib
+    |   ├── action             
+    |   |   ├── downloadJSON.ts
+    |   |   ├── eventHandlers.ts
+    |   |   ├── filterPlanets.ts
+    |   ├── types
+    |   |   ├── index.ts
     ├── public
     ├── store
     |   ├── store.ts
