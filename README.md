@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Almabase Assignment
+
+This project is a frontend application built using Next.js. It utilizes Redux Toolkit for state management, Axios for making HTTP requests, and TailwindCSS for styling. The project is written in TypeScript to ensure type safety and better development experience.
+
+## Deployed Link
+*https://almabase-assignment-umber.vercel.app/*
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up and run the project on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have the following software installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/dalaixlmao/Almabase-assignment.git
+   cd almabase-assignment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm install
 
-## Deploy on Vercel
+### Running the Project
+#### Development Server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The application will start on http://localhost:3000.
+
+### Project Structure
+Here's an overview of the project structure:
+
+    almabase-assignment/
+    ├── app/         
+    |   ├── favicon.ico
+    |   ├── globals.css
+    |   ├── layout.tsx
+    |   ├── page.tsx
+    ├── components/         
+    |   ├── Alert.tsx
+    |   ├── Error.tsx
+    |   ├── Export.tsx
+    |   ├── ExportFilter.tsx
+    |   ├── FilterCheks.tsx
+    |   ├── Filters.tsx
+    |   ├── FilterType.tsx
+    |   ├── Import.tsx
+    |   ├── Loader.tsx
+    |   ├── LowerHalf.tsx
+    |   ├── Planet.tsx
+    |   ├── Result.tsx
+    |   ├── SearchBar.tsx
+    ├── lib/action             
+    |       ├── downloadJSON.ts
+    |       ├── filterPlanets.ts
+    ├── public
+    ├── store
+    |   ├── store.ts
+    |   ├── hook.ts
+    |   ├── slice.ts
+    |   ├── StoreProvider.tsx
+    ├── .eslintrc.json    
+    ├── tailwind.config.js
+    ├── tsconfig.json     
+    └── package.json     
+
+### Technologies Used
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **React**: A JavaScript library for building user interfaces.
+- **Redux Toolkit**: A standardized way to write Redux logic, helping manage state efficiently.
+- **Axios**: A promise-based HTTP client for the browser and Node.js.
+- **TailwindCSS**: A utility-first CSS framework for rapidly building custom user interfaces.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript.
+
+### Features
+- Filtering based on various parameters.
+- Import other's filtering configurations.
+- Download and share your filtering configuration.
