@@ -32,7 +32,7 @@ Ensure you have the following software installed:
 
    ```bash
    git clone https://github.com/dalaixlmao/Almabase-assignment.git
-   cd almabase-assignment
+   cd Almabase-assignment
 
 2. **Install dependencies:**
 
