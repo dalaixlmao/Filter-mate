@@ -3,7 +3,7 @@
 This project is a frontend application built using Next.js. It utilizes Redux Toolkit for state management, Axios for making HTTP requests, and TailwindCSS for styling. The project is written in TypeScript to ensure type safety and better development experience.
 
 ## Deployed Link
-*https://almabase-assignment-umber.vercel.app/*
+*https://filter-mate.vercel.app/*
 
 ## Table of Contents
 
