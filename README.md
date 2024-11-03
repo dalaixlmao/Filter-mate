@@ -1,4 +1,4 @@
-# Almabase Assignment
+# Filter Mate
 
 This project is a frontend application built using Next.js. It utilizes Redux Toolkit for state management, Axios for making HTTP requests, and TailwindCSS for styling. The project is written in TypeScript to ensure type safety and better development experience.
 
@@ -31,8 +31,8 @@ Ensure you have the following software installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/dalaixlmao/Almabase-assignment.git
-   cd Almabase-assignment
+   git clone https://github.com/dalaixlmao/Filter-mate.git
+   cd Filter-mate
 
 2. **Install dependencies:**
 
@@ -49,7 +49,7 @@ The application will start on http://localhost:3000.
 ### Project Structure
 Here's an overview of the project structure:
 
-    almabase-assignment/
+    Filter-mate/
     ├── app/         
     |   ├── favicon.ico
     |   ├── globals.css
